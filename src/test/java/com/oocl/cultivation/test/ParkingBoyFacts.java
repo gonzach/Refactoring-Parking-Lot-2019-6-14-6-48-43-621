@@ -129,19 +129,13 @@ class ParkingBoyFacts {
         ParkingLot parkingLot2 = new ParkingLot();
         ParkingBoy parkingBoy1 = new ParkingBoy(parkingLot1);
         ParkingBoy parkingBoy2 = new ParkingBoy(parkingLot2);
+        for(int i = 0; i< 4; i++){
+            parkingBoy1.park(new Car());
+        }
 
-        Car car1 = new Car();
-        Car car2 = new Car();
-        Car car3 = new Car();
-        Car car4 = new Car();
-
-        parkingBoy1.park(car1);
-        parkingBoy1.park(car2);
-        parkingBoy1.park(car3);
-        parkingBoy1.park(car4);
-
-        parkingBoy2.park(car1);
-        parkingBoy2.park(car2);
+        for(int i = 0; i< 2; i++){
+            parkingBoy2.park(new Car());
+        }
 
         SmartParkingBoy smartParkingBoy = new SmartParkingBoy(parkingLot1);
         smartParkingBoy.addParkingLot(parkingLot2);
@@ -158,19 +152,13 @@ class ParkingBoyFacts {
         ParkingLot parkingLot2 = new ParkingLot();
         ParkingBoy parkingBoy1 = new ParkingBoy(parkingLot1);
         ParkingBoy parkingBoy2 = new ParkingBoy(parkingLot2);
+        for(int i = 0; i< 4; i++){
+            parkingBoy1.park(new Car());
+        }
 
-        Car car1 = new Car();
-        Car car2 = new Car();
-        Car car3 = new Car();
-        Car car4 = new Car();
-
-        parkingBoy1.park(car1);
-        parkingBoy1.park(car2);
-        parkingBoy1.park(car3);
-        parkingBoy1.park(car4);
-
-        parkingBoy2.park(car1);
-        parkingBoy2.park(car2);
+        for(int i = 0; i< 2; i++){
+            parkingBoy2.park(new Car());
+        }
 
         SuperSmartParkingBoy superSmartParkingBoy = new SuperSmartParkingBoy(parkingLot1);
         superSmartParkingBoy.addParkingLot(parkingLot2);
@@ -180,7 +168,4 @@ class ParkingBoyFacts {
         assertEquals(5, parkingLot1.countCars());
         assertEquals(2, parkingLot2.countCars());
     }
-
-
-
 }
