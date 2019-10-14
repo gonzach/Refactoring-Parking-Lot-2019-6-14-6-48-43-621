@@ -5,10 +5,10 @@ import java.util.function.Function;
 
 public class SuperSmartParkingBoy extends ParkingBoy {
 
-    private final ParkingLot parkingLot;
+    private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.";
+
     public SuperSmartParkingBoy(ParkingLot parkingLot) {
         super(parkingLot);
-        this.parkingLot = parkingLot;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class SuperSmartParkingBoy extends ParkingBoy {
                 .orElse(null);
 
         if (parkingLot == null) {
-            setLastErrorMessage("Not enough position.");
+            setLastErrorMessage(CONST_NOT_ENOUGH_POSITION);
             return null;
         }
         return parkingLot.addCar(car);
