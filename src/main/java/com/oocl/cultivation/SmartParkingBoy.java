@@ -8,7 +8,7 @@ public class SmartParkingBoy extends ParkingBoy{
 
     public ParkingTicket park(Car car){
         ParkingLot parkingLot = getParkingLotList().stream()
-                .reduce(((parkingLot1, parkingLot2) -> parkingLot1.countCars() <= parkingLot2.countCars() ? parkingLot1 : parkingLot2))
+                .reduce(((parkingLot1, parkingLot2) -> getParkingLot(parkingLot1, parkingLot2)))
                 .orElse(null);
 
         if (parkingLot == null) {
@@ -16,5 +16,9 @@ public class SmartParkingBoy extends ParkingBoy{
             return null;
         }
         return parkingLot.addCar(car);
+    }
+
+    private ParkingLot getParkingLot(ParkingLot parkingLot1, ParkingLot parkingLot2) {
+        return parkingLot1.countCars() <= parkingLot2.countCars() ? parkingLot1 : parkingLot2;
     }
 }

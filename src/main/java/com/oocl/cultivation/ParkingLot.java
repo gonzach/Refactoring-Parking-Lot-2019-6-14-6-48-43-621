@@ -19,7 +19,6 @@ public class ParkingLot {
         return cars.size() - capacity;
     }
 
-
     public ParkingTicket addCar(Car car) {
         ParkingTicket parkingTicket = new ParkingTicket();
         if ( getAvailableParkingPosition()  == 0 ) {
