@@ -10,6 +10,11 @@ public class ParkingBoy {
     private final ParkingLot parkingLot;
     private String lastErrorMessage;
 
+    private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.";
+    private static final String CONST_PROVIDE_TICKET = "Please provide your parking ticket.";
+    private static final String CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
+
+
     public ParkingBoy(ParkingLot parkingLot) {
         this.parkingLot = parkingLot;
         parkingLotList.add(parkingLot);
@@ -23,7 +28,7 @@ public class ParkingBoy {
                     .filter(parkingLot -> parkingLot.countCars() != parkingLot.getCapacity())
                     .findFirst().orElse(null);
             if (availableParkingLot == null){
-                setLastErrorMessage("Not enough position.");
+                setLastErrorMessage(CONST_NOT_ENOUGH_POSITION);
                 return null;
             } else {
                 return availableParkingLot.addCar(car);
@@ -38,9 +43,9 @@ public class ParkingBoy {
     public Car fetch(ParkingTicket ticket) {
         Car fetchedTicketCar = parkingLot.getCar(ticket);
         if ( ticket == null ) {
-            setLastErrorMessage("Please provide your parking ticket.");
+            setLastErrorMessage(CONST_PROVIDE_TICKET);
         } else if ( fetchedTicketCar == null ) {
-            setLastErrorMessage( "Unrecognized parking ticket.");
+            setLastErrorMessage(CONST_UNRECOGNIZED_PARKING_TICKET);
         }
         return fetchedTicketCar;
     }
