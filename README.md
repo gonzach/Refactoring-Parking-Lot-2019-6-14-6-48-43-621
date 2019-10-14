@@ -13,3 +13,31 @@
 1. The commit message must satisfy the following pattern: `[$your name$] refactor: $code smell$ in $class/method$`. 
 1. You should find **AT LEAST** 6 refactoring points, containing **AT LEAST** 2 kinds of code smells.
 1. You should submit your new repository address in the *answer* field.
+
+************TYPE OF CODE SMELLS*******************
+SmartParkingBoy
+1. Dead code
+removed unused code 
+2. Remove spaces
+
+ParkingTicket
+1. Comment
+- remove comment
+
+ParkingBoyFacts
+1. Switch to for loop manual way of adding car
+2. Remove spaces
+3. Primitive Obsession
+
+ParkingBoy
+1. Primitive Obsession
+
+SmartParkingBoy
+1. Primitive Obsession
+2. Extend Method
+3. Deadcode
+
+SuperParkingBoy
+1. Primitive Obsession
+2. Extend Method
+3. Deadcode
