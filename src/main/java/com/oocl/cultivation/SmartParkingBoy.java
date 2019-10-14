@@ -1,7 +1,5 @@
 package com.oocl.cultivation;
 
-import java.util.Comparator;
-
 public class SmartParkingBoy extends ParkingBoy{
 
     public SmartParkingBoy(ParkingLot parkingLot) {
