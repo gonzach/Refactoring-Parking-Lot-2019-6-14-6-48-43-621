@@ -29,7 +29,6 @@ public class ParkingLot {
         return parkingTicket;
     }
 
-
     public Car getCar(ParkingTicket ticket) {
         Car car = cars.get(ticket);
         cars.remove(ticket);

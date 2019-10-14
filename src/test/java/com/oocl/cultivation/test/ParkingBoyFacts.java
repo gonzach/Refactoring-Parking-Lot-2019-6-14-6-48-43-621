@@ -89,22 +89,24 @@ class ParkingBoyFacts {
     void should_get_response_message_if_customer_gives_wrong_ticket() {
         ParkingLot parkinglot = new ParkingLot();
         ParkingBoy parkingBoy = new ParkingBoy(parkinglot);
+        final String CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
 
         Car fetchCar = parkingBoy.fetch(new ParkingTicket());
 
         assertNull(fetchCar);
-        assertEquals(parkingBoy.getLastErrorMessage(), "Unrecognized parking ticket.");
+        assertEquals(parkingBoy.getLastErrorMessage(), CONST_UNRECOGNIZED_PARKING_TICKET);
     }
 
     @Test
     void should_get_response_message_when_customer_does_not_provide_ticket_when_fetching_car() {
         ParkingLot parkingLot = new ParkingLot();
         ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        final String CONST_PROVIDE_TICKET = "Please provide your parking ticket.";
 
         Car fetchCar = parkingBoy.fetch(null);
 
         assertNull(fetchCar);
-        assertEquals(parkingBoy.getLastErrorMessage(), "Please provide your parking ticket.");
+        assertEquals(parkingBoy.getLastErrorMessage(), CONST_PROVIDE_TICKET);
     }
 
     @Test
