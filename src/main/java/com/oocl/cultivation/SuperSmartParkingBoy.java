@@ -1,8 +1,5 @@
 package com.oocl.cultivation;
 
-import java.util.Comparator;
-import java.util.function.Function;
-
 public class SuperSmartParkingBoy extends ParkingBoy {
 
     private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.";
