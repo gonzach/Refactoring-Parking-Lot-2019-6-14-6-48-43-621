@@ -2,8 +2,6 @@ package com.oocl.cultivation;
 
 public class SuperSmartParkingBoy extends ParkingBoy {
 
-    private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.";
-
     public SuperSmartParkingBoy(ParkingLot parkingLot) {
         super(parkingLot);
     }
@@ -15,7 +13,7 @@ public class SuperSmartParkingBoy extends ParkingBoy {
                 .orElse(null);
 
         if (parkingLot == null) {
-            setLastErrorMessage(CONST_NOT_ENOUGH_POSITION);
+            setLastErrorMessage(super.getConstNotEnoughPosition());
             return null;
         }
         return parkingLot.addCar(car);
