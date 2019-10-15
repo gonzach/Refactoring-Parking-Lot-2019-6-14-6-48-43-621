@@ -1,14 +1,14 @@
 package com.oocl.cultivation;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class ParkingBoy {
 
-    private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.";
-    private static final String CONST_PROVIDE_TICKET = "Please provide your parking ticket.";
-    private static final String CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
+    private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.",
+            CONST_PROVIDE_TICKET = "Please provide your parking ticket.",
+            CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
+
     private List<ParkingLot> parkingLotList = new ArrayList<>();
     private final ParkingLot parkingLot;
     private String lastErrorMessage;
