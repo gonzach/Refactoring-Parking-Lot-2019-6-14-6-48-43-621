@@ -31,6 +31,8 @@ ParkingBoyFacts
 
 ParkingBoy
 1. Primitive Obsession
+2. remove unused import 
+3. use add method not manual add parking lot
 
 SmartParkingBoy
 1. Primitive Obsession
