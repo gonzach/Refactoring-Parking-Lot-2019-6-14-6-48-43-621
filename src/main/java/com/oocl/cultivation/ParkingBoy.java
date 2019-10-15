@@ -15,7 +15,7 @@ public class ParkingBoy {
 
     public ParkingBoy(ParkingLot parkingLot) {
         this.parkingLot = parkingLot;
-        parkingLotList.add(parkingLot);
+        addParkingLot(parkingLot);
     }
 
     public ParkingTicket park(Car car) {
