@@ -6,8 +6,8 @@ import java.util.List;
 public class ParkingBoy {
 
     private static final String CONST_NOT_ENOUGH_POSITION = "Not enough position.",
-            CONST_PROVIDE_TICKET = "Please provide your parking ticket.",
-            CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
+                                CONST_PROVIDE_TICKET = "Please provide your parking ticket.",
+                                CONST_UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
 
     private List<ParkingLot> parkingLotList = new ArrayList<>();
     private final ParkingLot parkingLot;
