@@ -25,7 +25,7 @@ public class ParkingBoy {
             ParkingLot availableParkingLot = parkingLotList.stream()
                     .filter(parkingLot -> parkingLot.countCars() != parkingLot.getCapacity())
                     .findFirst().orElse(null);
-            if (availableParkingLot == null){
+            if (availableParkingLot == null) {
                 setLastErrorMessage(getConstNotEnoughPosition());
                 return null;
             } else {
@@ -40,19 +40,19 @@ public class ParkingBoy {
 
     public Car fetch(ParkingTicket ticket) {
         Car fetchedTicketCar = parkingLot.getCar(ticket);
-        if ( ticket == null ) {
+        if (ticket == null) {
             setLastErrorMessage(getConstProvideTicket());
-        } else if ( fetchedTicketCar == null ) {
+        } else if (fetchedTicketCar == null) {
             setLastErrorMessage(getConstUnrecognizedParkingTicket());
         }
         return fetchedTicketCar;
     }
 
     public String getLastErrorMessage() {
-       return lastErrorMessage;
+        return lastErrorMessage;
     }
 
-    public void addParkingLot(ParkingLot parkingLot){
+    public void addParkingLot(ParkingLot parkingLot) {
         parkingLotList.add(parkingLot);
     }
 

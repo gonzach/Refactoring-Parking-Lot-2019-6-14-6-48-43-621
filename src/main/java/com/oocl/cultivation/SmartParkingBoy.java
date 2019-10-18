@@ -1,12 +1,12 @@
 package com.oocl.cultivation;
 
-public class SmartParkingBoy extends ParkingBoy{
+public class SmartParkingBoy extends ParkingBoy {
 
     public SmartParkingBoy(ParkingLot parkingLot) {
         super(parkingLot);
     }
 
-    public ParkingTicket park(Car car){
+    public ParkingTicket park(Car car) {
         ParkingLot parkingLot = getParkingLotList().stream()
                 .reduce(((parkingLot1, parkingLot2) -> getParkingLot(parkingLot1, parkingLot2)))
                 .orElse(null);

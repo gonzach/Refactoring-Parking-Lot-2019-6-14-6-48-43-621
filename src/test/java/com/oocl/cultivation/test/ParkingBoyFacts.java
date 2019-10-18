@@ -41,8 +41,8 @@ class ParkingBoyFacts {
         ParkingTicket car2_parkingTicket = parkingBoy.park(car2);
         Car fetchedCar2 = parkingBoy.fetch(car2_parkingTicket);
 
-        assertEquals( fetchedCar1, car1);
-        assertEquals( fetchedCar2, car2);
+        assertEquals(fetchedCar1, car1);
+        assertEquals(fetchedCar2, car2);
     }
 
     @Test
@@ -75,7 +75,7 @@ class ParkingBoyFacts {
     void should_parking_boy_should_not_park_car_if_exceed_capacity() {
         ParkingLot parkingLot = new ParkingLot();
         ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
-        for(int i = 0; i< 10; i++){
+        for (int i = 0; i < 10; i++) {
             parkingBoy.park(new Car());
         }
 
@@ -113,7 +113,7 @@ class ParkingBoyFacts {
     void should_parking_boy_will_park_cars_to_the_second_parking_lot_when_the_first_parking_lot_is_full() {
         ParkingLot parkingLot1 = new ParkingLot();
         ParkingBoy parkingBoy = new ParkingBoy(parkingLot1);
-        for(int i = 0; i< 10; i++){
+        for (int i = 0; i < 10; i++) {
             parkingBoy.park(new Car());
         }
 
@@ -131,11 +131,11 @@ class ParkingBoyFacts {
         ParkingLot parkingLot2 = new ParkingLot();
         ParkingBoy parkingBoy1 = new ParkingBoy(parkingLot1);
         ParkingBoy parkingBoy2 = new ParkingBoy(parkingLot2);
-        for(int i = 0; i< 4; i++){
+        for (int i = 0; i < 4; i++) {
             parkingBoy1.park(new Car());
         }
 
-        for(int i = 0; i< 2; i++){
+        for (int i = 0; i < 2; i++) {
             parkingBoy2.park(new Car());
         }
 
@@ -154,11 +154,11 @@ class ParkingBoyFacts {
         ParkingLot parkingLot2 = new ParkingLot();
         ParkingBoy parkingBoy1 = new ParkingBoy(parkingLot1);
         ParkingBoy parkingBoy2 = new ParkingBoy(parkingLot2);
-        for(int i = 0; i< 4; i++){
+        for (int i = 0; i < 4; i++) {
             parkingBoy1.park(new Car());
         }
 
-        for(int i = 0; i< 2; i++){
+        for (int i = 0; i < 2; i++) {
             parkingBoy2.park(new Car());
         }
 

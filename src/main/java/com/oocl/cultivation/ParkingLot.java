@@ -21,7 +21,7 @@ public class ParkingLot {
 
     public ParkingTicket addCar(Car car) {
         ParkingTicket parkingTicket = new ParkingTicket();
-        if ( getAvailableParkingPosition()  == 0 ) {
+        if (getAvailableParkingPosition() == 0) {
             return null;
         }
         cars.put(parkingTicket, car);
